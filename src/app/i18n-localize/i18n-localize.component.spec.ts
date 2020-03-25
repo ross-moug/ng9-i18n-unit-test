@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { I18nLocalizeComponent } from './i18n-localize.component';
 
-xdescribe('I18nLocalizeComponent', () => {
+describe('I18nLocalizeComponent', () => {
   let component: I18nLocalizeComponent;
   let fixture: ComponentFixture<I18nLocalizeComponent>;
 
