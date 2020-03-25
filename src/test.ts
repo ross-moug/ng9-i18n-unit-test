@@ -8,16 +8,17 @@ import {
 } from '@angular/platform-browser-dynamic/testing';
 
 // Attempt to mock global $localize function.
-// import Spy = jasmine.Spy;
-// import createSpy = jasmine.createSpy;
-//
-// const _global: any = typeof global !== "undefined" && global;
-//
-// _global.$localize = createSpy("$localize");
-//
-// declare global {
-//   const $localize: Spy;
-// }
+import Spy = jasmine.Spy;
+import createSpy = jasmine.createSpy;
+
+// tslint:disable-next-line:variable-name
+const _global: any = typeof global !== 'undefined' && global;
+
+_global.$localize = createSpy('$localize');
+
+declare global {
+  const $localize: Spy;
+}
 
 declare const require: any;
 
