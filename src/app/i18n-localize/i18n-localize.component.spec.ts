@@ -8,18 +8,20 @@ describe('I18nLocalizeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ I18nLocalizeComponent ]
+      declarations: [ I18nLocalizeComponent ],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
+    $localize.calls.reset();
+    $localize.and.returnValue('Hello World!)';
+
     fixture = TestBed.createComponent(I18nLocalizeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should call $localize once', () => {
+    expect($localize).toHaveBeenCalledTimes(1);
   });
 });
