@@ -14,14 +14,13 @@ describe('I18nLocalizeComponent', () => {
   }));
 
   beforeEach(() => {
-    $localize.calls.reset();
-    $localize.and.returnValue('Hello World!)';
+    mockLocalize.calls.reset();
 
     fixture = TestBed.createComponent(I18nLocalizeComponent);
     component = fixture.componentInstance;
   });
 
   it('should call $localize once', () => {
-    expect($localize).toHaveBeenCalledTimes(1);
+    expect(mockLocalize).toHaveBeenCalledTimes(1);
   });
 });
